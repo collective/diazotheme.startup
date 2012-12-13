@@ -1,0 +1,3 @@
+- Template tweaks done in Classic Theme need to be done through diazo
+- Create Thunderburst (Dark Sunburst Theme)
+- Create Responsive for Classic Theme?

@@ -1,0 +1,480 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rules xmlns="http://namespaces.plone.org/diazo"
+       xmlns:css="http://namespaces.plone.org/diazo/css"
+       xmlns:xhtml="http://www.w3.org/1999/xhtml"
+       xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+
+  <!-- The condition makes sure that theme is only applied when served in the 
+       plone main_template. This is necessary for functional edit popups in 
+       Tiny, for example. -->
+  <theme href="index.html" css:if-content="#visual-portal-wrapper"/>
+
+  <!-- Head rules
+       ================================================================== -->
+  <!-- Create conditional comment IE detection -->
+  <before css:theme="html">
+<!--[if lt IE 7]> <html class="no-js ie ie6 ltie8 oldie"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js ie ie7 ltie8 oldie"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js ie ie8 oldie"> <![endif]-->
+<!--[if IE 9]>    <html class="no-js ie ie9"> <![endif]-->
+<!--[if gt IE 9]><!-->
+  </before>
+
+  <before css:theme-children="html">
+<!--<![endif]-->
+  </before>
+
+  <!-- Attributes -->
+  <copy attributes="*" css:theme="html" css:content="html"/>
+  <copy attributes="*" css:theme="body" css:content="body"/>
+
+  <!-- Pull in Plone Meta -->
+  <before css:theme="title" css:content="meta" />
+
+  <!-- Base tag -->
+  <before css:theme-children="head" css:content="base"/>
+
+  <!-- Title -->
+  <replace css:theme="title" css:content="title" />
+
+  <!-- Style -->
+  <after css:theme-children="head">
+      <link href="/++theme++h5bp/favicon.ico" type="image/x-icon" rel="shortcut icon"/>
+      <link href="/++theme++h5bp/apple-touch-icon.png" rel="apple-touch-icon"/>
+      <style>
+          .brand img { padding-bottom: 3px; opacity: .7; }
+          .brand:hover img { padding-bottom: 3px; opacity: 1; }
+          .ploneCalendar { width: 100%; }
+          .ploneCalendar th {  text-align: left; }
+          .ploneCalendar td {  text-align: right; }
+          .ploneCalendar td[class*=today] {  font-size: 150%; }
+          .calendarHeader { text-align: center; }
+          .siteactions a { padding-left: 2em; }
+          .big-icon { margin-top: -.75em; }
+          #content .searchPage { margin: 0 .5em 0 0; }
+          #calendar-previous { float: left; }
+          #calendar-next { float: right; }
+          #calendar-previous, #calendar-next { text-decoration: none; }
+          #portal-columns { margin-bottom: 2em; }
+          #kss-spinner { display: none; }
+      </style>
+  </after>
+
+  <!-- Scripts -->
+  <after css:theme-children="head" css:content="head script"/>
+
+  <!-- Body rules
+       ================================================================== -->
+  <!-- Nav bar 
+       .................................................................. -->
+  <copy attributes="*" css:theme=".brand" css:content="#portal-logo"/>
+  <copy css:theme=".brand">
+      <img width="61" height="16" alt="Plone" 
+           src="/++theme++h5bp/img/plone-logo-16.png" />
+  </copy>
+  
+  <copy attributes="*" css:theme=".navbar-search" 
+        css:content="#portal-searchbox form"/>
+  <copy attributes="title name placeholder" css:theme=".navbar-search input" 
+        css:content="#searchGadget"/>
+
+  <!-- Bootstrap has active class convention. -->
+  <replace content="//*[@class='selected']/@class">
+      <xsl:attribute name="class">active</xsl:attribute>
+  </replace>
+  <copy css:theme=".nav" css:content="#portal-globalnav > li"/>
+  
+  <copy attributes="action" css:theme=".navbar-form" 
+        css:content="#portal-searchbox form"/>
+  <copy css:theme=".navbar-form">
+      <xsl:apply-templates css:select="#portal-searchbox input[type=text]"/>
+  </copy>
+  
+  <!-- Content 
+       .................................................................. -->
+  
+  <!-- Header & lead -->
+  <rules if-content="//body[contains(@class, 'section-')] and not(//*[@id='breadcrumbs-1'])">
+      <before css:theme=".hero-unit h1">
+          <img width="128" height="128" alt="Plone" class="pull-right big-icon"
+               src="/++theme++h5bp/img/plone-icon-128.png"/>
+      </before>
+      <replace css:theme=".hero-unit h1" css:content="h1.documentFirstHeading" method="raw"/>
+      <replace css:theme=".hero-unit h1 + p" css:content=".documentDescription" method="raw"/>
+      <drop css:content="h1.documentFirstHeading"/>
+      <drop css:content=".documentDescription"/>
+      <drop css:theme=".hero-unit p + p"/>
+  </rules>
+  <rules css:if-content="body:not([class*=section-]), body[class*=section-] #breadcrumbs-1">
+      <replace css:content=".documentFirstHeading">
+          <div class="page-header">
+              <h1>
+                  <xsl:apply-templates select="./text()"/>
+              </h1>
+          </div>
+      </replace>
+      <replace css:content=".documentDescription">
+          <p class="lead">
+              <xsl:apply-templates select="./text()"/>
+          </p>
+      </replace>
+      <drop css:theme=".hero-unit"/>
+  </rules>
+       
+  <!-- Columns -->
+  <replace css:content=".width-full">
+      <div class="span12">
+          <xsl:apply-templates select="./*"/>
+      </div>
+  </replace>
+  <!-- Selectors with ":" pose a problem, use xpath -->
+  <replace content="//*[contains(concat(' ', normalize-space(@class), ' '), ' width-1:2 ')]">
+      <div class="span6">
+          <xsl:apply-templates select="./*"/>
+      </div>
+  </replace>
+  <replace content="//*[contains(concat(' ', normalize-space(@class), ' '), ' width-1:3 ')]">
+      <div class="span4">
+          <xsl:apply-templates select="./*"/>
+      </div>
+  </replace>
+  <replace content="//*[contains(concat(' ', normalize-space(@class), ' '), ' width-2:3 ')]">
+      <div class="span4">
+          <xsl:apply-templates select="./*"/>
+      </div>
+  </replace>
+  <replace content="//*[contains(concat(' ', normalize-space(@class), ' '), ' width-1:4 ')]">
+      <div class="span3">
+          <xsl:apply-templates select="./*"/>
+      </div>
+  </replace>
+  <replace content="//*[contains(concat(' ', normalize-space(@class), ' '), ' width-3:4 ')]">
+      <div class="span9">
+          <xsl:apply-templates select="./*"/>
+      </div>
+  </replace>
+  
+  <!-- Forms -->
+  <replace css:content="input">
+      <xsl:choose>
+          <xsl:when css:test="[type='submit']">
+              <button>
+                  <xsl:choose>
+                      <xsl:when css:test=".searchButton, .context">
+                          <xsl:attribute name="class">btn btn-primary</xsl:attribute>
+                      </xsl:when>
+                      <xsl:when css:test=".delete">
+                          <xsl:attribute name="class">btn btn-danger</xsl:attribute>
+                      </xsl:when>
+                      <xsl:otherwise>
+                          <xsl:attribute name="class">btn</xsl:attribute>
+                      </xsl:otherwise>
+                  </xsl:choose>
+                  <xsl:value-of select="./@value"/>
+              </button>
+          </xsl:when>
+          <xsl:when css:test="[type='checkbox']">
+              <input>
+                  <xsl:attribute name="name">
+                      <xsl:value-of select="./@name"/>
+                  </xsl:attribute>
+                  <xsl:attribute name="type">
+                      <xsl:value-of select="./@type"/>
+                  </xsl:attribute>
+                  <xsl:attribute name="id">
+                      <xsl:value-of select="./@id"/>
+                  </xsl:attribute>
+                  <xsl:attribute name="class">pull-left</xsl:attribute>
+                  
+              </input>
+          </xsl:when>
+          <xsl:otherwise>
+              <xsl:copy-of select="."/>
+          </xsl:otherwise>
+      </xsl:choose>
+  </replace>
+  <rules css:if-content="body.template-search">
+      <replace css:content=".actionMenu">
+          <div class="btn-group">
+              <button class="btn">
+                  <xsl:value-of select="./dt/a"/>
+              </button>
+              <button class="btn dropdown-toggle" data-toggle="dropdown">
+              <span class="caret"></span>
+              </button>
+              <ul class="dropdown-menu nav-list">
+                  <xsl:for-each select="./dd//fieldset">
+                      <li class="nav-header"><xsl:value-of select="./legend"/></li>
+                      <li class="divider"></li>
+                      <xsl:for-each select="./div//input[@type='checkbox']">
+                          <li>
+                              <label>
+                                  <xsl:attribute name="for">
+                                      <xsl:value-of select="following-sibling::label/@for"/>
+                                  </xsl:attribute>
+                                  <xsl:attribute name="class">checkbox</xsl:attribute> 
+                                  <xsl:copy-of select="."/>
+                                  <xsl:value-of select="following-sibling::label/text()"/>
+                              </label>
+                          </li>
+                      </xsl:for-each>
+                      <xsl:for-each select="./div//input[@type='radio']">
+                          <li>
+                              <label>
+                                  <xsl:attribute name="for">
+                                      <xsl:value-of select="following-sibling::label/@for"/>
+                                  </xsl:attribute>
+                                  <xsl:attribute name="class">radio</xsl:attribute> 
+                                  <xsl:copy-of select="."/>
+                                  <xsl:value-of select="following-sibling::label/text()"/>
+                              </label>
+                          </li>
+                      </xsl:for-each>
+                  </xsl:for-each>
+                  <li class="divider"></li>
+                  <li>
+                      <button class="btn btn-primary">
+                          <xsl:value-of select=".//input[@type='submit']/@value"/>
+                      </button>
+                  </li>
+              </ul>
+          </div>
+      </replace>
+      <replace css:content="#searchResultsSort">
+          <div class="clearfix">
+              <xsl:copy-of select="."/>
+          </div>
+          <hr/>
+      </replace>
+  </rules>
+  
+  <!-- Tiles -->
+  <replace css:content=".tileItem">
+      <div class="media">
+          <a class="pull-left">
+              <xsl:apply-templates select="./h2/a/@href"/>
+              <img> 
+                  <xsl:attribute name="class">media-object</xsl:attribute>
+                  <xsl:attribute name="src">
+                      <xsl:value-of select="./a/div/img/@src"/>
+                  </xsl:attribute>
+                  <xsl:attribute name="alt">
+                      <xsl:value-of select="./a/div/img/@alt"/>
+                  </xsl:attribute>
+              </img>
+          </a>
+          <div class="media-body">
+              <h4 class="media-heading">
+                  <xsl:apply-templates css:select=".tileHeadline > a"/>
+              </h4>
+              <xsl:apply-templates css:select=".tileBody"/>
+          </div>
+      </div>
+  </replace>
+      
+  <!-- Portlets -->
+  <replace css:content=".portlet">
+      <xsl:if css:test=".portletHeader">
+          <h2><xsl:apply-templates css:select=".portletHeader > *"/></h2>
+      </xsl:if>
+      <ul class="nav nav-list">
+          <xsl:for-each css:select=".portletItem">
+              <li>
+                  <xsl:apply-templates select="./*"/>
+              </li>
+          </xsl:for-each>
+      </ul>
+      <xsl:if css:test=".portletFooter">
+          <footer>
+              <small>
+                  <xsl:apply-templates css:select=".portletFooter"/>
+              </small>
+          </footer>
+      </xsl:if>
+      <hr/>
+  </replace>
+  <replace css:content=".portletNews, .portletEvents">
+      <h2><xsl:apply-templates css:select=".portletHeader > *"/></h2>
+      <ul class="nav nav-list">
+          <xsl:for-each css:select=".portletItem">
+              <li>
+                  <a>
+                      <xsl:attribute name="href">
+                          <xsl:value-of select="./a/@href"/>
+                      </xsl:attribute>
+                      <xsl:attribute name="title">
+                          <xsl:value-of select="./a/@title"/>
+                      </xsl:attribute>
+                      <xsl:value-of select="./a/text()"/>
+                      <small class="muted">
+                          <xsl:copy-of select="./span"/>
+                      </small>
+                  </a>
+              </li>
+          </xsl:for-each>
+      </ul>
+      <xsl:if css:test=".portletFooter">
+          <footer>
+              <small>
+                  <xsl:apply-templates css:select=".portletFooter"/>
+              </small>
+          </footer>
+      </xsl:if>
+      <hr/>
+  </replace>
+  <replace css:content=".portletNavigationTree">
+      <div class="well">
+          <ul class="nav nav-list navTree navTreeLevel0">
+              <xsl:if css:test=".portletHeader">
+                  <li class="list-header"><xsl:apply-templates css:select=".portletHeader > *"/></li>
+                  <li class="divider"></li>
+              </xsl:if>
+              <xsl:apply-templates select="./dd/ul/*"/>
+              <xsl:if css:test=".portletFooter">
+                  <li class="divider"></li>
+                  <li><xsl:apply-templates css:select=".portletFooter > *"/></li>
+              </xsl:if>
+          </ul>
+      </div>
+  </replace>
+  <replace css:content=".portletStaticText">
+      <div class="well">
+          <xsl:if css:test=".portletHeader">
+              <h2><xsl:apply-templates css:select=".portletHeader > *"/></h2>
+          </xsl:if>
+          <xsl:apply-templates css:select=".portletItem"/>
+          <xsl:apply-templates css:select="div.portletStaticText > *"/>
+          <xsl:if css:test=".portletFooter">
+              <footer><xsl:apply-templates css:select=".portletFooter"/></footer>
+          </xsl:if>
+      </div>
+  </replace>
+  <replace css:content=".portletCalendar">
+      <h2 class="calendarHeader">
+          <xsl:apply-templates css:select="#calendar-previous"/>
+          <xsl:apply-templates select=".//caption/text()" />
+          <xsl:apply-templates css:select="#calendar-next"/>
+      </h2>
+      <table class="ploneCalendar table table-hover table-condensed" summary="Calendar">
+          <xsl:apply-templates select=".//thead" />
+          <tbody class="table-bordered">
+              <xsl:apply-templates select=".//tbody/tr" />
+          </tbody>
+      </table>
+      <hr/>
+  </replace>
+  <strip css:content=".portletHeader"/>
+  <strip css:content=".portletLogin br"/>
+  <strip css:content="span[class*='portlet']"/>
+  <strip css:content=".portletItem"/>
+  <strip css:content=".portletFooter"/>
+  
+  <replace css:content="span.portletItemDetails">
+      <small class="portletItemDetails muted">
+          <xsl:apply-templates select="./text()" />
+      </small>
+  </replace>
+  
+  <replace css:content="table.listing">
+    <table class="table table-striped">
+      <xsl:apply-templates select="./*"/>
+    </table>
+  </replace>
+
+  <strip css:content=".portalMessage dd"/>
+  <replace css:content=".portalMessage" >
+    <xsl:choose>
+        <xsl:when css:test=".portalMessage[style]"/>
+        <xsl:when css:test=".portalMessage.info">
+            <div class="alert alert-block alert-info">
+                <button type="button" class="close" data-dismiss="alert">×</button>
+                <h4><xsl:apply-templates select="./dt/*"/></h4>
+                <xsl:apply-templates select="./*"/>
+            </div>                
+        </xsl:when>
+        <xsl:when test="contains(concat(' ', normalize-space(@class), ' '), ' error ')">
+            <div class="alert alert-block alert-error">
+                <button type="button" class="close" data-dismiss="alert">×</button>
+                <h4><xsl:apply-templates select="./dt/*"/></h4>
+                <xsl:apply-templates select="./*"/>
+            </div>
+        </xsl:when>      
+        <xsl:otherwise>
+            <div class="alert alert-block">
+                <button type="button" class="close" data-dismiss="alert">×</button>
+                <h4><xsl:apply-templates select="./dt/*"/></h4>
+                <xsl:apply-templates select="./*"/>
+            </div>  
+        </xsl:otherwise>
+    </xsl:choose>
+  </replace>
+
+  <!-- Move content over -->  
+  <after css:theme=".hero-unit" css:content="#visual-portal-wrapper > div:not(#portal-top):not(#portal-footer-wrapper)"/>
+
+  <!-- Breadcrumbs -->
+  <drop css:theme-children="body > .container .row"/>
+  <drop css:content="#portal-breadcrumbs"/>
+  <after css:theme=".hero-unit" method="raw">
+    <ul class="breadcrumb">
+        <xsl:for-each css:select="#portal-breadcrumbs > span:not(:last-child) a">
+            <li>
+                <xsl:apply-templates css:select="a"/>
+                <span class="divider">/</span>
+            </li>
+        </xsl:for-each>
+        <li class="active">
+            <xsl:apply-templates css:select="#portal-breadcrumbs > span:last-child > *"/>
+        </li>
+    </ul>
+  </after> 
+
+  <!-- Footer -->
+  <copy css:theme="footer">
+      <div class="clearfix">
+          <p>
+              <small>
+                  <xsl:apply-templates css:select="#portal-footer > p"/>
+              </small>
+          </p>
+          <small>
+              <span class="pull-left"><xsl:apply-templates css:select="#portal-colophon a"/></span>
+          </small>
+          <small>
+              <span class="pull-right siteactions">
+                  <xsl:for-each select="//*[@id='portal-siteactions']//a">
+                      <xsl:apply-templates select="."/>
+                  </xsl:for-each>
+              </span>
+          </small>
+      </div>
+  </copy> 
+  <strip css:content="#portal-footer > p"/>
+  
+  <copy attributes="*" css:theme=".footer .brand" css:content="#portal-colophon a"/>
+  <copy css:theme=".footer .brand" css:content-children="#portal-colophon a"/>
+  <copy css:theme=".footer .nav" css:content="#portal-siteactions li"/>
+
+  <!-- Drop GA script in theme, comes from site setup -->
+  <drop css:theme="body script:last-child"/>
+  <after css:theme="body script:last-child" css:content="#visual-portal-wrapper > script"/>
+
+  <!-- Remove edit fixtures -->
+  <drop css:content=".actionMenuContent"/>
+  <drop css:content="#edit-bar"/>
+  <drop css:content="#plone-lock-status"/>
+  <strip css:content=".documentEditable"/>
+  <drop css:content=".documentAuthor"/>
+  <drop css:content=".documentModified"/>
+  <drop css:content=".contentHistory"/>
+  <drop css:content=".portletRecent"/>
+  <drop css:content=".managePortletsLink"/>
+  <replace css:content="#portal-personaltools-wrapper dl">
+    <ul class="actionMenu deactivated" id="portal-personaltools">
+      <li id="anon-personalbar">
+        <xsl:apply-templates css:select="#user-name"/>  
+      </li>
+    </ul>
+  </replace>
+
+</rules>

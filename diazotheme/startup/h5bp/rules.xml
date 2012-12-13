@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rules xmlns="http://namespaces.plone.org/diazo"
+       xmlns:css="http://namespaces.plone.org/diazo/css"
+       xmlns:xhtml="http://www.w3.org/1999/xhtml"
+       xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+
+  <!-- The condition makes sure that theme is only applied when served in the 
+       plone main_template. This is necessary for functional edit popups in 
+       Tiny, for example. -->
+  <theme href="index.html" css:if-content="#visual-portal-wrapper"/>
+
+  <!-- Head rules
+       ================================================================== -->
+  <!-- Create conditional comment IE detection -->
+  <before css:theme="html">
+<!--[if lt IE 7]> <html class="no-js ie ie6 ltie8 oldie"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js ie ie7 ltie8 oldie"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js ie ie8 oldie"> <![endif]-->
+<!--[if IE 9]>    <html class="no-js ie ie9"> <![endif]-->
+<!--[if gt IE 9]><!-->
+  </before>
+
+    <!-- The conditional comments outside of the html tag get stripped by diazo 
+         The above statement puts them back so the commenting works.
+         
+         If you want to put it around an html tag that doesn't have the 
+         comments yet, then uncomment the before tag below. -->
+    <!--
+      <before css:theme-children="html">
+    -->
+    <!--<![endif]-->
+    <!--
+      </before>
+    -->
+
+  <!-- Attributes -->
+  <copy attributes="lang" css:theme="html" css:content="html"/>
+
+  <!-- Pull in Plone Meta -->
+  <before css:theme="title" css:content="meta" />
+
+  <!-- Base tag -->
+  <before css:theme-children="head" css:content="base"/>
+
+  <!-- Title -->
+  <replace css:theme="title" css:content="title" />
+
+  <after css:theme="head link">
+      <link href="/++theme++h5bp/favicon.ico" type="image/x-icon" rel="shortcut icon"/>
+      <link href="/++theme++h5bp/apple-touch-icon.png" rel="apple-touch-icon"/>
+  </after>
+
+  <!-- Scripts -->
+  <after css:theme-children="head" css:content="head script"/>
+
+  <!-- Body rules
+       ================================================================== -->
+  <!-- Attributes -->
+  <copy attributes="*" css:theme="body" css:content="body"/>
+  <replace css:theme="body > p" css:content-children="body" />
+
+  <!-- Drop GA script in theme, comes from site setup -->
+  <drop css:theme="body script:last-child"/>
+  <after css:theme="body script:last-child" 
+         css:content="#visual-portal-wrapper > script"/>
+
+  <!-- Remove edit fixtures -->
+  <drop css:content=".actionMenuContent"/>
+  <drop css:content="#edit-bar"/>
+  <drop css:content="#plone-lock-status"/>
+  <strip css:content=".documentEditable"/>
+  <drop css:content=".documentAuthor"/>
+  <drop css:content=".documentModified"/>
+  <drop css:content=".contentHistory"/>
+  <drop css:content=".portletRecent"/>
+  <drop css:content=".managePortletsLink"/>
+  <replace css:content="#portal-personaltools-wrapper dl">
+    <ul class="actionMenu deactivated" id="portal-personaltools">
+      <li id="anon-personalbar">
+        <xsl:apply-templates css:select="#user-name"/>  
+      </li>
+    </ul>
+  </replace>
+
+</rules>

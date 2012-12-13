@@ -4,7 +4,13 @@ Changelog
 1.0 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- Removed SASS from diazotheme.default themes
+- Changed configure for unified themes
+- Moved in diazo themes from:
+  - https://github.com/TH-code/diazotheme.h5bp
+  - https://github.com/TH-code/diazotheme.default
+  - https://github.com/TH-code/diazotheme.respond
+  [TH-code]
 
 1.0dev (unreleased)
 ------------------
