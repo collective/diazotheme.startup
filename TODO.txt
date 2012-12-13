@@ -1,3 +1,5 @@
 - Template tweaks done in Classic Theme need to be done through diazo
 - Create Thunderburst (Dark Sunburst Theme)
 - Create Responsive for Classic Theme?
+- Improve overall Classic Theme implementation e.g. missing images
+- Improve props for H5BP, now it's just a link, should me more
