@@ -1,6 +1,6 @@
 include *.txt
 
 recursive-include docs *
-recursive-include plonetheme *
+recursive-include diazotheme *
 
 global-exclude *pyc
