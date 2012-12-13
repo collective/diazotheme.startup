@@ -10,7 +10,7 @@ version = '1.0'
 long_description = (
     read('README.txt')
     + '\n' +
-    read('plonetheme', 'h5bp', 'README.txt')
+    read('diazotheme', 'startup', 'README.txt')
     + '\n' +
     read('CHANGES.txt')
     + '\n'
