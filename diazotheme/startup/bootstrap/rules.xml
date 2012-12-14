@@ -39,8 +39,8 @@
 
   <!-- Style -->
   <after css:theme-children="head">
-      <link href="/++theme++h5bp/favicon.ico" type="image/x-icon" rel="shortcut icon"/>
-      <link href="/++theme++h5bp/apple-touch-icon.png" rel="apple-touch-icon"/>
+      <link href="/++theme++initializr_bootstrap/favicon.ico" type="image/x-icon" rel="shortcut icon"/>
+      <link href="/++theme++initializr_bootstrap/apple-touch-icon.png" rel="apple-touch-icon"/>
       <style>
           .brand img { padding-bottom: 3px; opacity: .7; }
           .brand:hover img { padding-bottom: 3px; opacity: 1; }
@@ -70,7 +70,7 @@
   <copy attributes="*" css:theme=".brand" css:content="#portal-logo"/>
   <copy css:theme=".brand">
       <img width="61" height="16" alt="Plone" 
-           src="/++theme++h5bp/img/plone-logo-16.png" />
+           src="/++theme++initializr_bootstrap/img/plone-logo-16.png" />
   </copy>
   
   <copy attributes="*" css:theme=".navbar-search" 
@@ -185,7 +185,6 @@
                       <xsl:value-of select="./@id"/>
                   </xsl:attribute>
                   <xsl:attribute name="class">pull-left</xsl:attribute>
-                  
               </input>
           </xsl:when>
           <xsl:otherwise>

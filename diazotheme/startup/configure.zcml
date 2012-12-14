@@ -7,11 +7,11 @@
 
   <five:registerPackage package="." />
 
-  <plone:static directory="h5bp" name="startup_h5bp" type="theme" />
-  <plone:static directory="h5bp_responsive" name="startup_h5bp_responsive" type="theme" />
-  <plone:static directory="h5bp_bootstrap" name="startup_h5bp_bootstrap" type="theme" />
-  <plone:static directory="classic" name="startup_diazo_classic" type="theme" />
-  <plone:static directory="sunburst" name="startup_diazo_sunburst" type="theme" />
-  <plone:static directory="responsive" name="startup_responsive" type="theme" />
+  <plone:static directory="h5bp" name="startup_initializr_h5bp" type="theme" />
+  <plone:static directory="responsive" name="startup_initializr_responsive" type="theme" />
+  <plone:static directory="bootstrap" name="startup_initializr_bootstrap" type="theme" />
+  <plone:static directory="classic" name="startup_classic" type="theme" />
+  <plone:static directory="sunburst" name="startup_sunburst" type="theme" />
+  <plone:static directory="responsify" name="startup_responsify" type="theme" />
 
 </configure>
