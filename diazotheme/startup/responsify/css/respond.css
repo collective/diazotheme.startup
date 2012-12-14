@@ -27,7 +27,7 @@
     #portal-column-content {
         width: 65%;
     }
-    #portal-column-content:fist-child:last-child {
+    #portal-column-content:first-child:last-child {
         width: 100%;
         margin-right: 0%;
     }
