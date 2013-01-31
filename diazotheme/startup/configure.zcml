@@ -12,6 +12,5 @@
   <plone:static directory="bootstrap" name="startup_initializr_bootstrap" type="theme" />
   <plone:static directory="classic" name="startup_classic" type="theme" />
   <plone:static directory="sunburst" name="startup_sunburst" type="theme" />
-  <plone:static directory="responsify" name="startup_responsify" type="theme" />
 
 </configure>
