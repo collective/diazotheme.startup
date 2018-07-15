@@ -5,7 +5,7 @@ new themes.
 
 Four of the themes are to be used with Sunburst Theme as Theme base. The three
 default options you get with Initializr (http://www.initializr.com/):
-- initializr_h5bp (bare bones theme that just gives you normalisation and 
+- initializr_h5bp (bare bones theme that just gives you normalization and 
   default text styling)
 - initializr_responsive, the responsive option (except with plonified colors)
 - initializr_bootstrap, HTML5 boilerplate bootstap option. It's got the hero 
@@ -22,5 +22,5 @@ altering will probably be necessary)
 
 The last two themes Classic and Sunburst are the sunburst and classic themes 
 applied to the "(unstyled)" theme base. These would be practical to use as
-a basis for fully functional themes (edit incuded), because they are near 
+a basis for fully functional themes (edit included), because they are near 
 identical and they therefore all the default javascript works.   
