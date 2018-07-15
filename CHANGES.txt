@@ -4,6 +4,11 @@ Changelog
 1.0 (unreleased)
 ------------------
 
+- Fixed the 'Cannot add attributes to an element if children have 
+  been already added to the element.' error at 'HTML5 Boilerplate 
+  Bootstrap Startup Theme' header rules for selected class with a 
+  replace content directive
+  [macagua]
 - Fixed IOError: Error reading file '/++theme++h5bp_bootstrap/rules.xml'
   [macagua]
 - Fixed IOError: Error reading file '/++theme++initializr_h5bp/rules.xml'

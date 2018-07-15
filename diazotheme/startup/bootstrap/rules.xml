@@ -79,9 +79,11 @@
         css:content="#searchGadget"/>
 
   <!-- Bootstrap has active class convention. -->
+  <!--
   <replace content="//*[@class='selected']/@class">
       <xsl:attribute name="class">active</xsl:attribute>
   </replace>
+  -->
   <copy css:theme=".nav" css:content="#portal-globalnav > li"/>
   
   <copy attributes="action" css:theme=".navbar-form" 
