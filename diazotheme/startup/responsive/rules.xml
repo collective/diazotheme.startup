@@ -49,8 +49,8 @@
        of the download.
        -->
   <after css:theme="head link">
-      <link href="/++theme++initializr_responsive/favicon.ico" type="image/x-icon" rel="shortcut icon"/>
-      <link href="/++theme++initializr_responsive/apple-touch-icon.png" rel="apple-touch-icon"/>
+      <link href="/++theme++startup_initializr_responsive/img/favicon.ico" type="image/x-icon" rel="shortcut icon"/>
+      <link href="/++theme++startup_initializr_responsive/img/apple-touch-icon.png" rel="apple-touch-icon"/>
       <style>
           table { width: 100%; }
           nav { width: auto; }
