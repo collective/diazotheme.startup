@@ -4,6 +4,9 @@ Changelog
 1.0 (unreleased)
 ------------------
 
+- Fixed GET '/++theme++initializr_bootstrap/img/plone-logo-16.png' 
+  404 (Not Found) Error
+  [macagua]
 - Fixed GET '/++theme++h5bp/img/plone-icon-128.png' 404 (Not Found) Error
   [macagua]
 - Fixed the 'Cannot add attributes to an element if children have 
