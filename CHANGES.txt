@@ -4,6 +4,8 @@ Changelog
 1.0 (unreleased)
 ------------------
 
+- Fixed GET '/++theme++h5bp/img/plone-icon-128.png' 404 (Not Found) Error
+  [macagua]
 - Fixed the 'Cannot add attributes to an element if children have 
   been already added to the element.' error at 'HTML5 Boilerplate 
   Bootstrap Startup Theme' header rules for selected class with a 
