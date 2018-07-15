@@ -46,8 +46,8 @@
   <replace css:theme="title" css:content="title" />
 
   <after css:theme="head link">
-      <link href="/++theme++initializr_h5bp/favicon.ico" type="image/x-icon" rel="shortcut icon"/>
-      <link href="/++theme++initializr_h5bp/apple-touch-icon.png" rel="apple-touch-icon"/>
+      <link href="/++theme++startup_initializr_h5bp/favicon.ico" type="image/x-icon" rel="shortcut icon"/>
+      <link href="/++theme++startup_initializr_h5bp/apple-touch-icon.png" rel="apple-touch-icon"/>
   </after>
 
   <!-- Scripts -->
