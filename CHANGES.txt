@@ -4,6 +4,8 @@ Changelog
 1.0 (unreleased)
 ------------------
 
+- Updated the diazo preview file for 'Startup Initializr Bootstrap Jumbotron' theme
+  [macagua]
 - Fixed GET '/++theme++startup_initializr_bootstrap/img/apple-touch-icon.png' 404 (Not Found) Error
   [macagua]
 - Fixed GET '/++theme++startup_initializr_bootstrap/img/favicon.ico' 404 (Not Found) Error
