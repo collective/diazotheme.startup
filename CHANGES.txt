@@ -4,6 +4,8 @@ Changelog
 1.0 (unreleased)
 ------------------
 
+- Fixed GET '/++theme++startup_initializr_responsive/img/favicon.ico' 404 (Not Found) Error
+  [macagua]
 - Updated the diazo preview file for 'Startup Initializr Responsive' theme
   [macagua]
 - Updated the diazo preview file for 'Startup Initializr HTML5 Boilerplate' theme
