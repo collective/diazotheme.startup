@@ -99,7 +99,7 @@
   <rules if-content="//body[contains(@class, 'section-')] and not(//*[@id='breadcrumbs-1'])">
       <before css:theme=".hero-unit h1">
           <img width="128" height="128" alt="Plone" class="pull-right big-icon"
-               src="/++theme++startup_initializr_h5bp/img/plone-icon-128.png"/>
+               src="{$base}/++theme++startup_initializr_h5bp/img/plone-icon-128.png"/>
       </before>
       <replace css:theme=".hero-unit h1" css:content="h1.documentFirstHeading" method="raw"/>
       <replace css:theme=".hero-unit h1 + p" css:content=".documentDescription" method="raw"/>
