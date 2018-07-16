@@ -55,7 +55,7 @@
   <!-- Change the logo in content and the copy the portal-top children -->
   <replace css:content="#portal-logo > img">
     <img>
-      <xsl:attribute name="src">/++theme++sunburst/img/logo.png</xsl:attribute>
+      <xsl:attribute name="src">/++theme++startup_sunburst/img/logo.png</xsl:attribute>
       <xsl:attribute name="width">215</xsl:attribute>
       <xsl:attribute name="height">56</xsl:attribute>
       <xsl:attribute name="title">

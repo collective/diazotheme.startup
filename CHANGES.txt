@@ -4,6 +4,8 @@ Changelog
 1.0 (unreleased)
 ------------------
 
+- Fixed GET '/++theme++sunburst/img/logo.png' 404 (Not Found) Error
+  [macagua]
 - Fixed IOError: Error reading file '/++theme++sunburst/rules.xml'
   [macagua]
 - Fixed GET '/++theme++startup_initializr_responsive/img/apple-touch-icon.png' 404 (Not Found) Error
