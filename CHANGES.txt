@@ -4,6 +4,8 @@ Changelog
 1.0 (unreleased)
 ------------------
 
+- Updated the diazo preview file for 'Startup Initializr Responsive' theme
+  [macagua]
 - Updated the diazo preview file for 'Startup Initializr HTML5 Boilerplate' theme
   [macagua]
 - Fixed GET '/++theme++startup_initializr_h5bp/img/plone-icon-128.png' 404 (Not Found) Error
