@@ -40,7 +40,7 @@
   <!-- Style -->
   <after css:theme-children="head">
       <link href="{$base}/++theme++startup_initializr_bootstrap/img/favicon.ico" type="image/x-icon" rel="shortcut icon"/>
-      <link href="/++theme++startup_initializr_bootstrap/img/apple-touch-icon.png" rel="apple-touch-icon"/>
+      <link href="{$base}/++theme++startup_initializr_bootstrap/img/apple-touch-icon.png" rel="apple-touch-icon"/>
       <style>
           .brand img { padding-bottom: 3px; opacity: .7; }
           .brand:hover img { padding-bottom: 3px; opacity: 1; }
