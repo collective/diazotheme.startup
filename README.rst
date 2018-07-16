@@ -14,17 +14,17 @@ This package contains six diazo themes that are good to use as startups for
 new themes. Four of the themes are to be used with `Sunburst Theme`_ as Theme base. The three
 default options you get with `Initializr`_:
 
-- **Initializr HTML5 Boilerplate Bootstrap Startup Theme**, it's a HTML5 boilerplate 
+- **Startup Initializr Bootstrap Jumbotron** Theme, it's a HTML5 boilerplate 
   bootstap option. It's got the hero unit on home and is making use of a lot of 
   trickery that has been expanded in https://github.com/TH-code/diazotheme.bootstrap
 
-- **Initializr HTML5 Boilerplate Theme**, it's a bare bones diazo theme that just 
+- **Startup Initializr HTML5 Boilerplate** Theme, it's a bare bones diazo theme that just 
   gives you normalization and default text styling.
 
   The h5bp theme css and html has not been altered from the download, so with 
   new versions it should be a matter of dropping in new files.
 
-- **Initializr Responsive Theme**, it's a responsive option (except with plonified colors).
+- **Startup Initializr Responsive** Theme, it's a responsive option (except with plonified colors).
 
   There is the responsive theme, which only adds responsiveness to the 
   "`Sunburst Theme`_" theme base. It should be able to be used as an easy 
@@ -36,9 +36,9 @@ applied to the "(unstyled)" theme base. These would be practical to use as
 a basis for fully functional themes (edit included), because they are near 
 identical and they therefore all the default javascript works. 
 
-- **Initializr Plone Classic Theme**, a diazo theme for Plone `Classic Theme`_.
+- **Startup Plone Classic** Theme, a diazo theme for Plone `Classic Theme`_.
 
-- **Initializr Plone Sunburst Theme**, a diazo theme for Plone `Sunburst Theme`_.
+- **Startup Plone Sunburst** Theme, a diazo theme for Plone `Sunburst Theme`_.
 
 
 How to create a child theme
@@ -112,53 +112,53 @@ Screenshots
 ===========
 
 
-Initializr HTML5 Boilerplate Bootstrap Startup Theme
-----------------------------------------------------
+Startup Initializr Bootstrap Jumbotron Theme
+--------------------------------------------
 
 Layout of the site when viewed in a computer resolution:
 
 .. image:: https://github.com/collective/diazotheme.startup/raw/master/diazotheme/startup/bootstrap/preview.png
-  :alt: Initializr HTML5 Boilerplate Bootstrap Startup Theme
+  :alt: Startup Initializr Bootstrap Jumbotron Theme
   :align: center
 
 
-Initializr Plone Classic Theme
-------------------------------
-
-Layout of the site when viewed in a computer resolution:
-
-.. image:: https://github.com/collective/diazotheme.startup/raw/master/diazotheme/startup/classic/preview.png
-  :alt: Initializr Plone Classic Theme
-  :align: center
-
-
-Initializr HTML5 Boilerplate Theme
-----------------------------------
-
-Layout of the site when viewed in a computer resolution:
-
-.. image:: https://github.com/collective/diazotheme.startup/raw/master/diazotheme/startup/h5bp/preview.png
-  :alt: Initializr HTML5 Boilerplate Theme
-  :align: center
-
-
-Initializr Responsive Theme
+Startup Plone Classic Theme
 ---------------------------
 
 Layout of the site when viewed in a computer resolution:
 
-.. image:: https://github.com/collective/diazotheme.startup/raw/master/diazotheme/startup/responsive/preview.png
-  :alt: Initializr Responsive Theme
+.. image:: https://github.com/collective/diazotheme.startup/raw/master/diazotheme/startup/classic/preview.png
+  :alt: Startup Plone Classic Theme
   :align: center
 
 
-Initializr Plone Sunburst Theme
--------------------------------
+Startup Initializr HTML5 Boilerplate Theme
+------------------------------------------
+
+Layout of the site when viewed in a computer resolution:
+
+.. image:: https://github.com/collective/diazotheme.startup/raw/master/diazotheme/startup/h5bp/preview.png
+  :alt: Startup Initializr HTML5 Boilerplate Theme
+  :align: center
+
+
+Startup Initializr Responsive Theme
+-----------------------------------
+
+Layout of the site when viewed in a computer resolution:
+
+.. image:: https://github.com/collective/diazotheme.startup/raw/master/diazotheme/startup/responsive/preview.png
+  :alt: Startup Initializr Responsive Theme
+  :align: center
+
+
+Startup Plone Sunburst Theme
+----------------------------
 
 Layout of the site when viewed in a computer resolution:
 
 .. image:: https://github.com/collective/diazotheme.startup/raw/master/diazotheme/startup/sunburst/preview.png
-  :alt: Initializr Plone Sunburst Theme
+  :alt: Startup Plone Sunburst Theme
   :align: center
 
 
@@ -172,11 +172,11 @@ Requirements
 Features
 ========
 
-- Provides the diazo rules for "Initializr HTML5 Boilerplate Bootstrap Startup* theme.
-- Provides the diazo rules for *Initializr Plone Classic* theme.
-- Provides the diazo rules for *Initializr HTML5 Boilerplate* theme.
-- Provides the diazo rules for *Initializr Responsive* theme.
-- Provides the diazo rules for *Initializr Plone Sunburst* theme.
+- Provides the diazo rules for "Startup Initializr Bootstrap Jumbotron* theme.
+- Provides the diazo rules for *Startup Plone Classic* theme.
+- Provides the diazo rules for *Startup Initializr HTML5 Boilerplate* theme.
+- Provides the diazo rules for *Startup Initializr Responsive* theme.
+- Provides the diazo rules for *Startup Plone Sunburst* theme.
 
 
 Installation
@@ -216,15 +216,15 @@ provides rule that are practical to use in other diazo themes.
 
 The resources of this framework can be reached through
 
-- **Initializr HTML5 Boilerplate Bootstrap Startup Theme**
+- **Startup Initializr Bootstrap Jumbotron** Theme
     ``/++theme++startup_initializr_bootstrap``
-- **Initializr Plone Classic Theme**
+- **Startup Plone Classic** Theme
     ``/++theme++startup_classic``
-- **Initializr HTML5 Boilerplate Theme**
+- **Startup Initializr HTML5 Boilerplate** Theme
     ``/++theme++startup_initializr_h5bp``
-- **Initializr Responsive Theme**
+- **Startup Initializr Responsive** Theme
     ``/++theme++startup_initializr_responsive``
-- **Initializr Plone Sunburst Theme**
+- **Startup Plone Sunburst** Theme
     ``/++theme++startup_sunburst``
 
 There are placed at ``diazotheme.startup/diazotheme/startup/`` directory 
@@ -233,7 +233,7 @@ with following resources files:
 ::
 
     _ bootstrap
-      Provides the resources from "Initializr HTML5 Boilerplate Bootstrap Startup Theme".
+      Provides the resources from "Startup Initializr Bootstrap Jumbotron Theme".
       _ css
       _ img
       _ js
@@ -244,7 +244,7 @@ with following resources files:
       _ rules.xml
       
     _ classic
-      Provides the resources from "Initializr Plone Classic Theme".
+      Provides the resources from "Startup Plone Classic Theme".
       _ css
       _ img
       _ index.html
@@ -253,7 +253,7 @@ with following resources files:
       _ rules.xml
       
     _ h5bp
-      Provides the resources from "Initializr HTML5 Boilerplate Theme".
+      Provides the resources from "Startup Initializr HTML5 Boilerplate Theme".
       _ css
       _ img
       _ js
@@ -264,7 +264,7 @@ with following resources files:
       _ rules.xml
       
     _ responsive
-      Provides the resources from "Initializr Responsive Theme".
+      Provides the resources from "Startup Initializr Responsive Theme".
       _ css
       _ img
       _ js
@@ -275,7 +275,7 @@ with following resources files:
       _ rules.xml
       
     _ sunburst
-      Provides the resources from "Initializr Plone Sunburst Theme".
+      Provides the resources from "Startup Plone Sunburst Theme".
       _ css
       _ img
       _ index.html
