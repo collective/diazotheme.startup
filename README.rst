@@ -15,6 +15,16 @@ based on HTML5 Boilerplate by allowing you to choose which parts you want or don
 from it. A `responsive template`_ has also been added to start from a basic design instead 
 of a blank page.
 
+`HTML5 Boilerplate`_ (sometimes called **H5BP**) is a front-end template based on *HTML5*. 
+This is the biggest differentiator from Bootstrap—it’s a template, not a framework. 
+Boilerplate is, according to its author, 
+
+*"a package of useful contraptions, hacks, and cross-browser libraries."*
+
+While Bootstrap contains strong rules for each element of an interface, Boilerplate is more 
+geared to help you with a fast and smart launch of your new project. H5BP is not about rules; 
+it’s about a quick start.
+
 This package contains *five diazo themes* that are good to use as startups for 
 new themes. Four of the themes are to be used with `Sunburst Theme`_ as Theme base. 
 
@@ -26,9 +36,9 @@ The *three default themes* options you get with `Initializr`_:
   `diazotheme.bootstrap`_ package.
 
 - **Startup Classic HTML5 Boilerplate Initializr** Theme, it's a bare bones diazo theme that just 
-  gives you normalization and default text styling based on `Classic H5BP template`_.
+  gives you normalization and default text styling based on `Classic H5BP Initializr`_ template.
 
-  The H5BP theme css and html has not been altered from the download, so with 
+  The **H5BP** theme css and html has not been altered from the download, so with 
   new versions it should be a matter of dropping in new files.
 
 - **Startup Responsive Initializr** Theme, it's a responsive option based on the
@@ -180,7 +190,7 @@ Requirements
 Features
 ========
 
-- Provides the diazo rules for "Startup Bootstrap Jumbotron Initializr* theme.
+- Provides the diazo rules for *Startup Bootstrap Jumbotron Initializr* theme.
 - Provides the diazo rules for *Startup Plone Classic* theme.
 - Provides the diazo rules for *Startup Classic HTML5 Boilerplate Initializr* theme.
 - Provides the diazo rules for *Startup Responsive Initializr* theme.
@@ -222,21 +232,16 @@ Resources
 This package is the parent of all Plone diazo themes and 
 provides rule that are practical to use in other diazo themes.
 
-The resources of this framework can be reached through
 
-- **Startup Bootstrap Jumbotron Initializr** Theme
+Startup Bootstrap Jumbotron Initializr
+--------------------------------------
+
+The resources of this theme can be reached through
+
     ``/++theme++startup_initializr_bootstrap``
-- **Startup Plone Classic** Theme
-    ``/++theme++startup_classic``
-- **Startup Classic HTML5 Boilerplate Initializr** Theme
-    ``/++theme++startup_initializr_h5bp``
-- **Startup Responsive Initializr** Theme
-    ``/++theme++startup_initializr_responsive``
-- **Startup Plone Sunburst** Theme
-    ``/++theme++startup_sunburst``
 
-There are placed at ``diazotheme.startup/diazotheme/startup/`` directory 
-with following resources files:
+There are placed at ``diazotheme.startup/diazotheme/startup/bootstrap`` 
+directory with following resources files:
 
 ::
 
@@ -250,7 +255,20 @@ with following resources files:
       _ preview.png
       _ README.txt
       _ rules.xml
-      
+
+
+Startup Plone Classic
+---------------------
+
+The resources of this theme can be reached through
+
+    ``/++theme++startup_classic``
+
+There are placed at ``diazotheme.startup/diazotheme/startup/classic`` 
+directory with following resources files:
+
+::
+
     _ classic
       Provides the resources from "Startup Plone Classic Theme".
       _ css
@@ -259,7 +277,20 @@ with following resources files:
       _ manifest.cfg
       _ preview.png
       _ rules.xml
-      
+
+
+Startup Classic HTML5 Boilerplate Initializr
+--------------------------------------------
+
+The resources of this theme can be reached through
+
+    ``/++theme++startup_initializr_h5bp``
+
+There are placed at ``diazotheme.startup/diazotheme/startup/h5bp`` 
+directory with following resources files:
+
+::
+
     _ h5bp
       Provides the resources from "Startup Classic HTML5 Boilerplate Initializr Theme".
       _ css
@@ -270,7 +301,20 @@ with following resources files:
       _ preview.png
       _ README.txt
       _ rules.xml
-      
+
+
+Startup Responsive Initializr
+-----------------------------
+
+The resources of this theme can be reached through
+
+    ``/++theme++startup_initializr_responsive``
+
+There are placed at ``diazotheme.startup/diazotheme/startup/responsive`` 
+directory with following resources files:
+
+::
+
     _ responsive
       Provides the resources from "Startup Responsive Initializr Theme".
       _ css
@@ -281,7 +325,20 @@ with following resources files:
       _ preview.png
       _ README.txt
       _ rules.xml
-      
+
+
+Startup Plone Sunburst
+----------------------
+
+The resources of this theme can be reached through
+
+    ``/++theme++startup_sunburst``
+
+There are placed at ``diazotheme.startup/diazotheme/startup/sunburst`` 
+directory with following resources files:
+
+::
+
     _ sunburst
       Provides the resources from "Startup Plone Sunburst Theme".
       _ css
@@ -320,12 +377,13 @@ Amazing contributions
 You can find an updated list of package contributors on https://github.com/collective/diazotheme.startup/contributors
 
 .. _`Initializr`: http://www.initializr.com/
+.. _`responsive template`: http://verekia.com/initializr/responsive-template
 .. _`Sunburst Theme`: https://github.com/plone/plonetheme.sunburst
 .. _`Classic Theme`: https://github.com/plone/plonetheme.classic
 .. _`Bootstrap Jumbotron example`: https://getbootstrap.com/docs/3.3/examples/jumbotron/
 .. _`diazotheme.bootstrap`: https://github.com/TH-code/diazotheme.bootstrap
-.. _`Classic H5BP template`: https://github.com/h5bp/html5-boilerplate/blob/v4.3.0/doc/TOC.md
-.. _`responsive template`: http://verekia.com/initializr/responsive-template
+.. _`Classic H5BP Initializr`: https://github.com/h5bp/html5-boilerplate/blob/v4.3.0/doc/TOC.md
+.. _`HTML5 Boilerplate`: https://html5boilerplate.com/
 .. _`diazotheme.startup`: https://github.com/collective/diazotheme.startup
 .. _`Diazo`: http://diazo.org
 .. _`plone.app.theming`: https://pypi.org/project/plone.app.theming/
