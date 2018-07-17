@@ -20,18 +20,18 @@ new themes. Four of the themes are to be used with `Sunburst Theme`_ as Theme ba
 
 The *three default themes* options you get with `Initializr`_:
 
-- **Startup Initializr Bootstrap Jumbotron** Theme, it's a HTML5 boilerplate 
+- **Startup Bootstrap Jumbotron Initializr** Theme, it's a HTML5 boilerplate 
   bootstap option based on `Bootstrap Jumbotron example`_. It's got the hero unit on 
   home and is making use of a lot of  trickery that has been expanded in 
   `diazotheme.bootstrap`_ package.
 
-- **Startup Initializr HTML5 Boilerplate** Theme, it's a bare bones diazo theme that just 
+- **Startup Classic HTML5 Boilerplate Initializr** Theme, it's a bare bones diazo theme that just 
   gives you normalization and default text styling based on `Classic H5BP template`_.
 
   The H5BP theme css and html has not been altered from the download, so with 
   new versions it should be a matter of dropping in new files.
 
-- **Startup Initializr Responsive** Theme, it's a responsive option based on the
+- **Startup Responsive Initializr** Theme, it's a responsive option based on the
   *Jonathan Verrecchia* `responsive template`_ (except with plonified colors).
 
   There is the responsive theme, which only adds responsiveness to the 
@@ -120,13 +120,13 @@ Screenshots
 ===========
 
 
-Startup Initializr Bootstrap Jumbotron Theme
+Startup Bootstrap Jumbotron Initializr Theme
 --------------------------------------------
 
 Layout of the site when viewed in a computer resolution:
 
 .. image:: https://github.com/collective/diazotheme.startup/raw/master/diazotheme/startup/bootstrap/preview.png
-  :alt: Startup Initializr Bootstrap Jumbotron Theme
+  :alt: Startup Bootstrap Jumbotron Initializr Theme
   :align: center
 
 
@@ -140,23 +140,23 @@ Layout of the site when viewed in a computer resolution:
   :align: center
 
 
-Startup Initializr HTML5 Boilerplate Theme
-------------------------------------------
+Startup Classic HTML5 Boilerplate Initializr Theme
+--------------------------------------------------
 
 Layout of the site when viewed in a computer resolution:
 
 .. image:: https://github.com/collective/diazotheme.startup/raw/master/diazotheme/startup/h5bp/preview.png
-  :alt: Startup Initializr HTML5 Boilerplate Theme
+  :alt: Startup Classic HTML5 Boilerplate Initializr Theme
   :align: center
 
 
-Startup Initializr Responsive Theme
+Startup Responsive Initializr Theme
 -----------------------------------
 
 Layout of the site when viewed in a computer resolution:
 
 .. image:: https://github.com/collective/diazotheme.startup/raw/master/diazotheme/startup/responsive/preview.png
-  :alt: Startup Initializr Responsive Theme
+  :alt: Startup Responsive Initializr Theme
   :align: center
 
 
@@ -180,10 +180,10 @@ Requirements
 Features
 ========
 
-- Provides the diazo rules for "Startup Initializr Bootstrap Jumbotron* theme.
+- Provides the diazo rules for "Startup Bootstrap Jumbotron Initializr* theme.
 - Provides the diazo rules for *Startup Plone Classic* theme.
-- Provides the diazo rules for *Startup Initializr HTML5 Boilerplate* theme.
-- Provides the diazo rules for *Startup Initializr Responsive* theme.
+- Provides the diazo rules for *Startup Classic HTML5 Boilerplate Initializr* theme.
+- Provides the diazo rules for *Startup Responsive Initializr* theme.
 - Provides the diazo rules for *Startup Plone Sunburst* theme.
 
 
@@ -224,13 +224,13 @@ provides rule that are practical to use in other diazo themes.
 
 The resources of this framework can be reached through
 
-- **Startup Initializr Bootstrap Jumbotron** Theme
+- **Startup Bootstrap Jumbotron Initializr** Theme
     ``/++theme++startup_initializr_bootstrap``
 - **Startup Plone Classic** Theme
     ``/++theme++startup_classic``
-- **Startup Initializr HTML5 Boilerplate** Theme
+- **Startup Classic HTML5 Boilerplate Initializr** Theme
     ``/++theme++startup_initializr_h5bp``
-- **Startup Initializr Responsive** Theme
+- **Startup Responsive Initializr** Theme
     ``/++theme++startup_initializr_responsive``
 - **Startup Plone Sunburst** Theme
     ``/++theme++startup_sunburst``
@@ -241,7 +241,7 @@ with following resources files:
 ::
 
     _ bootstrap
-      Provides the resources from "Startup Initializr Bootstrap Jumbotron Theme".
+      Provides the resources from "Startup Bootstrap Jumbotron Initializr Theme".
       _ css
       _ img
       _ js
@@ -261,7 +261,7 @@ with following resources files:
       _ rules.xml
       
     _ h5bp
-      Provides the resources from "Startup Initializr HTML5 Boilerplate Theme".
+      Provides the resources from "Startup Classic HTML5 Boilerplate Initializr Theme".
       _ css
       _ img
       _ js
@@ -272,7 +272,7 @@ with following resources files:
       _ rules.xml
       
     _ responsive
-      Provides the resources from "Startup Initializr Responsive Theme".
+      Provides the resources from "Startup Responsive Initializr Theme".
       _ css
       _ img
       _ js
