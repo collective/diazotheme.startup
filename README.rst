@@ -15,16 +15,18 @@ new themes. Four of the themes are to be used with `Sunburst Theme`_ as Theme ba
 default options you get with `Initializr`_:
 
 - **Startup Initializr Bootstrap Jumbotron** Theme, it's a HTML5 boilerplate 
-  bootstap option. It's got the hero unit on home and is making use of a lot of 
-  trickery that has been expanded in https://github.com/TH-code/diazotheme.bootstrap
+  bootstap option based on `Bootstrap Jumbotron example`_. It's got the hero unit on 
+  home and is making use of a lot of  trickery that has been expanded in 
+  `diazotheme.bootstrap`_ package.
 
 - **Startup Initializr HTML5 Boilerplate** Theme, it's a bare bones diazo theme that just 
-  gives you normalization and default text styling.
+  gives you normalization and default text styling based on `Classic H5BP template`_.
 
-  The h5bp theme css and html has not been altered from the download, so with 
+  The H5BP theme css and html has not been altered from the download, so with 
   new versions it should be a matter of dropping in new files.
 
-- **Startup Initializr Responsive** Theme, it's a responsive option (except with plonified colors).
+- **Startup Initializr Responsive** Theme, it's a responsive option based on 
+  `Jonathan Verrecchia Responsive template`_ (except with plonified colors).
 
   There is the responsive theme, which only adds responsiveness to the 
   "`Sunburst Theme`_" theme base. It should be able to be used as an easy 
@@ -314,6 +316,10 @@ You can find an updated list of package contributors on https://github.com/colle
 .. _`Initializr`: http://www.initializr.com/
 .. _`Sunburst Theme`: https://github.com/plone/plonetheme.sunburst
 .. _`Classic Theme`: https://github.com/plone/plonetheme.classic
+.. _`Bootstrap Jumbotron example`: https://getbootstrap.com/docs/3.3/examples/jumbotron/
+.. _`diazotheme.bootstrap`: https://github.com/TH-code/diazotheme.bootstrap
+.. _`Classic H5BP template`: https://github.com/h5bp/html5-boilerplate/blob/v4.3.0/doc/TOC.md
+.. _`Jonathan Verrecchia Responsive template`: http://verekia.com/initializr/responsive-template
 .. _`diazotheme.startup`: https://github.com/collective/diazotheme.startup
 .. _`Diazo`: http://diazo.org
 .. _`plone.app.theming`: https://pypi.org/project/plone.app.theming/
