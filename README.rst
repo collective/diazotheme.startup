@@ -10,20 +10,19 @@ Introduction
 using the **theming** and **packaging** features available for create Diazo_ theme
 using `plone.app.theming`_.
 
-`Initializr`_ is here to kick-start the development of your new projects. It generates templates 
-based on HTML5 Boilerplate by allowing you to choose which parts you want or don't want 
-from it. A `responsive template`_ has also been added to start from a basic design instead 
-of a blank page.
+`Initializr`_ is here to kick-start the development of your new projects. It generates 
+templates based on HTML5 Boilerplate by allowing you to choose which parts you want or 
+don't want from it. A `responsive template`_ has also been added to start from a basic 
+design instead of a blank page.
 
 `HTML5 Boilerplate`_ (sometimes called **H5BP**) is a front-end template based on *HTML5*. 
-This is the biggest differentiator from Bootstrap—it’s a template, not a framework. 
-Boilerplate is, according to its author, 
+This is the biggest differentiator from Bootstrap-it's a template, not a framework. 
+Boilerplate is, according to its author, *"a package of useful contraptions, hacks, and 
+cross-browser libraries"*.
 
-*"a package of useful contraptions, hacks, and cross-browser libraries."*
-
-While Bootstrap contains strong rules for each element of an interface, Boilerplate is more 
-geared to help you with a fast and smart launch of your new project. H5BP is not about rules; 
-it’s about a quick start.
+While Bootstrap contains strong rules for each element of an interface, Boilerplate is 
+more geared to help you with a fast and smart launch of your new project. **H5BP** is 
+not about rules; it's about a quick start.
 
 This package contains *five diazo themes* that are good to use as startups for 
 new themes. Four of the themes are to be used with `Sunburst Theme`_ as Theme base. 
