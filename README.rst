@@ -6,13 +6,19 @@ diazotheme.startup
 Introduction
 ============
 
-``diazotheme.startup`` package provides diazo themes based on the `Initializr`_ 
+``diazotheme.startup`` package provides diazo themes based on the *Initializr* 
 using the **theming** and **packaging** features available for create Diazo_ theme
 using `plone.app.theming`_.
 
-This package contains six diazo themes that are good to use as startups for 
-new themes. Four of the themes are to be used with `Sunburst Theme`_ as Theme base. The three
-default options you get with `Initializr`_:
+`Initializr`_ is here to kick-start the development of your new projects. It generates templates 
+based on HTML5 Boilerplate by allowing you to choose which parts you want or don't want 
+from it. A `responsive template`_ has also been added to start from a basic design instead 
+of a blank page.
+
+This package contains *five diazo themes* that are good to use as startups for 
+new themes. Four of the themes are to be used with `Sunburst Theme`_ as Theme base. 
+
+The *three default themes* options you get with `Initializr`_:
 
 - **Startup Initializr Bootstrap Jumbotron** Theme, it's a HTML5 boilerplate 
   bootstap option based on `Bootstrap Jumbotron example`_. It's got the hero unit on 
@@ -25,15 +31,15 @@ default options you get with `Initializr`_:
   The H5BP theme css and html has not been altered from the download, so with 
   new versions it should be a matter of dropping in new files.
 
-- **Startup Initializr Responsive** Theme, it's a responsive option based on 
-  `Jonathan Verrecchia Responsive template`_ (except with plonified colors).
+- **Startup Initializr Responsive** Theme, it's a responsive option based on the
+  *Jonathan Verrecchia* `responsive template`_ (except with plonified colors).
 
   There is the responsive theme, which only adds responsiveness to the 
   "`Sunburst Theme`_" theme base. It should be able to be used as an easy 
   responsification option to old style themes based on Sunburst. (Some style 
   altering will probably be necessary)
 
-The last two themes Classic and Sunburst are the sunburst and classic themes 
+The *last two themes* are the *Plone Classic* and *Plone Sunburst* themes 
 applied to the "(unstyled)" theme base. These would be practical to use as
 a basis for fully functional themes (edit included), because they are near 
 identical and they therefore all the default javascript works. 
@@ -319,7 +325,7 @@ You can find an updated list of package contributors on https://github.com/colle
 .. _`Bootstrap Jumbotron example`: https://getbootstrap.com/docs/3.3/examples/jumbotron/
 .. _`diazotheme.bootstrap`: https://github.com/TH-code/diazotheme.bootstrap
 .. _`Classic H5BP template`: https://github.com/h5bp/html5-boilerplate/blob/v4.3.0/doc/TOC.md
-.. _`Jonathan Verrecchia Responsive template`: http://verekia.com/initializr/responsive-template
+.. _`responsive template`: http://verekia.com/initializr/responsive-template
 .. _`diazotheme.startup`: https://github.com/collective/diazotheme.startup
 .. _`Diazo`: http://diazo.org
 .. _`plone.app.theming`: https://pypi.org/project/plone.app.theming/
