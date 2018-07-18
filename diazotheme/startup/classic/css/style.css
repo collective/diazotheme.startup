@@ -255,7 +255,7 @@
     background: white;
   }
   #content ul {
-    list-style-image: url("/bullet.png");
+    list-style-image: url("/++theme++startup_classic/img/bullet.png");
     list-style-type: square;
     margin: 0.5em 0 0 1.5em;
   }
@@ -2516,7 +2516,7 @@
 
   /* Static text portlet */
   .portletStaticText ul {
-    list-style-image: url("/bullet.png");
+    list-style-image: url("/++theme++startup_classic/img/bullet.png");
     list-style-type: square;
     margin: 0.5em 0 0 1.5em;
   }
