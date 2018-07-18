@@ -230,6 +230,7 @@ Enabling the theme
 
 Select and enable the theme from the Diazo control panel. That's it!
 
+
 Enabling the Plone Classic Theme
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
