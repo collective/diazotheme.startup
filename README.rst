@@ -224,6 +224,7 @@ Or, you can add it as a dependency on your own product ``setup.py`` file: ::
         'diazotheme.startup',
     ],
 
+
 Enabling the theme
 ------------------
 
