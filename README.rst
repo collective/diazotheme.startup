@@ -244,7 +244,7 @@ them you need to do the following steps:
 #. And click on ``Save`` button.
 
 #. Next go to the ``Themes`` tab from the Diazo control panel, select and 
-   enable the theme. That's it!
+   enable the ``Startup Plone Classic Theme``. That's it!
 
 
 Resources
