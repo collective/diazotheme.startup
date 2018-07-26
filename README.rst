@@ -7,7 +7,7 @@ Introduction
 ============
 
 ``diazotheme.startup`` package provides diazo themes based on the *Initializr* 
-using the **theming** and **packaging** features available for create Diazo_ theme
+using the **theming** and **packaging** features available for create `Diazo`_ theme
 using `plone.app.theming`_.
 
 `Initializr`_ is here to kick-start the development of your new projects. It generates 
@@ -397,6 +397,8 @@ Amazing contributions
 
 You can find an updated list of package contributors on https://github.com/collective/diazotheme.startup/contributors
 
+.. _`Diazo`: http://diazo.org
+.. _`plone.app.theming`: https://pypi.org/project/plone.app.theming/
 .. _`Initializr`: http://www.initializr.com/
 .. _`responsive template`: http://verekia.com/initializr/responsive-template
 .. _`Sunburst Theme`: https://github.com/plone/plonetheme.sunburst
@@ -406,5 +408,3 @@ You can find an updated list of package contributors on https://github.com/colle
 .. _`Classic H5BP Initializr`: https://github.com/h5bp/html5-boilerplate/blob/v4.3.0/doc/TOC.md
 .. _`HTML5 Boilerplate`: https://html5boilerplate.com/
 .. _`diazotheme.startup`: https://github.com/collective/diazotheme.startup
-.. _`Diazo`: http://diazo.org
-.. _`plone.app.theming`: https://pypi.org/project/plone.app.theming/
